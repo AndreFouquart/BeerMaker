@@ -25,12 +25,6 @@ class _EtapesState extends State<Etapes> {
 
   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _indexActuel = index;
-    });
-  }
-
   void _changePage(int delta) {
     int newIndex = _indexActuel + delta;
     if (newIndex >= 0 && newIndex < _pages.length) {

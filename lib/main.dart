@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const SplashScreen(),
-      debugShowCheckedModeBanner: false,
       routes: {
         '/route': (context) => const SplashScreen(),
         '/etapes': (BuildContext context) => const Etapes(),
