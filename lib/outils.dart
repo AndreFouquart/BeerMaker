@@ -77,7 +77,6 @@ class _OutilsState extends State<Outils> {
     return rgb;
   }
 
-
   TextEditingController vp = TextEditingController();
   TextEditingController vr = TextEditingController();
   TextEditingController mebcg = TextEditingController();
@@ -190,10 +189,10 @@ class _OutilsState extends State<Outils> {
                         ),
                       ),
                       Text('MCU = ${Calcul().getMcu(volumeProd, volumeRech, moyenneEbc).toStringAsFixed(2)}'),
-                      Text('EBC = ${Calcul().getEbc(moyenneEbc, volumeProd, volumeRech).toStringAsFixed(2)}'),
-                      Text('SRM = ${Calcul().getSrm(moyenneEbc, volumeProd, volumeRech).toStringAsFixed(2)}'),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
+                          Text('EBC = ${Calcul().getEbc(moyenneEbc, volumeProd, volumeRech).toStringAsFixed(2)}'),
                           Container(
                             color: Color(int.parse(_srmToRGB())),
                             child: Padding(
@@ -208,6 +207,7 @@ class _OutilsState extends State<Outils> {
                           ),
                         ],
                       ),
+                      Text('SRM = ${Calcul().getSrm(moyenneEbc, volumeProd, volumeRech).toStringAsFixed(2)}'),
                     ],
                   ),
                 ),

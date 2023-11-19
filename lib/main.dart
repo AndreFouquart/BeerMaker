@@ -25,7 +25,6 @@ class MyApp extends StatelessWidget {
         '/route': (context) => const SplashScreen(),
         '/etapes': (BuildContext context) => const Etapes(),
         '/outils': (BuildContext context) => const Outils(),
-
       },
       initialRoute: '/route',
     );
